@@ -16,7 +16,7 @@ namespace Repositories.Repositories
         {
             _orderDetailsDAO = new OrderDetailsDAO();
         }
-        public int CreateOrderDetail(OrderDetails orderDetail)
+        public int CreateOrderDetail(OrderDetail orderDetail)
         {
             orderDetail.DetailId = _orderDetailsDAO.GetNewOrderDetailId();
           var result =   _orderDetailsDAO.CreateOrderDetail(orderDetail);

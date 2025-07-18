@@ -9,6 +9,6 @@ namespace Services.Interfaces
 {
     public interface IOrderDetailsService
     {
-        int CreateOrderDetail(OrderDetails orderDetail);
+        int CreateOrderDetail(OrderDetail orderDetail);
     }
 }

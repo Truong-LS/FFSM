@@ -12,23 +12,22 @@ namespace Repositories.Repositories
         {
             _discountDAO = new DiscountDAO();
         }
-
-        public IEnumerable<Discounts> GetAllDiscounts()
+        public IEnumerable<Discount> GetAllDiscounts()
         {
             return _discountDAO.GetAllDiscounts();
         }
 
-        public Discounts GetDiscountById(int discountId)
+        public Discount GetDiscountById(int discountId)
         {
             return _discountDAO.GetDiscountById(discountId);
         }
 
-        public void AddDiscount(Discounts discount)
+        public void AddDiscount(Discount discount)
         {
             _discountDAO.AddDiscount(discount);
         }
 
-        public void UpdateDiscount(Discounts discount)
+        public void UpdateDiscount(Discount discount)
         {
             _discountDAO.UpdateDiscount(discount);
         }
@@ -36,6 +35,11 @@ namespace Repositories.Repositories
         public void DeleteDiscount(int discountId)
         {
             _discountDAO.DeleteDiscount(discountId);
+        }
+
+        public Discount GetDiscountByCode(string code)
+        {
+            return _discountDAO.GetDiscountByCode(code);
         }
     }
 }

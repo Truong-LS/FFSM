@@ -10,12 +10,12 @@ namespace DataAccessObject
 {
     public class DiscountsDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public DiscountsDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
-        public Discounts GetDiscountByCode(string code)
+        public Discount GetDiscountByCode(string code)
         {
             var discount = _fastFoodDbContext.Discounts
                 .FirstOrDefault(d => d.Code == code && d.IsActive == true && d.StartDate <= DateTime.Now && d.EndDate >= DateTime.Now);

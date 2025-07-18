@@ -10,7 +10,7 @@ namespace Services.Services
 {
     public class PaymentsService : IPaymentsService
     {
-        public bool CreatePayment(Payments payments)
+        public bool CreatePayment(Payment payments)
         { 
             if (payments == null)
             {

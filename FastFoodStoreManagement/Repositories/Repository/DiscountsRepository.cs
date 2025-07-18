@@ -16,7 +16,7 @@ namespace Repositories.Repositories
         {
             _discountsDAO = new DiscountsDAO();
         }
-        public Discounts GetDiscountByCode(string code)
+        public Discount GetDiscountByCode(string code)
         {
             return _discountsDAO.GetDiscountByCode(code);
         }

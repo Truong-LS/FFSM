@@ -9,6 +9,6 @@ namespace Repositories.Interfaces
 {
     public interface ICategoriesRepository
     {
-        List<Categories> GetAllCategories();
+        List<Category> GetAllCategories();
     }
 }

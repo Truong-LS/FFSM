@@ -9,8 +9,8 @@ namespace Services.Interfaces
 {
     public interface IItemsService
     {
-        List<Models.Items> GetAllItems();
-        List<Items> SearchItems(string keyword);
-        List<Items> GetItemsByCategory(int categoryId);
+        List<Models.Item> GetAllItems();
+        List<Item> SearchItems(string keyword);
+        List<Item> GetItemsByCategory(int categoryId);
     }
 }

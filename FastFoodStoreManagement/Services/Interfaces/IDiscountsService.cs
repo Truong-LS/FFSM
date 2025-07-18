@@ -10,6 +10,6 @@ namespace Services.Interfaces
     public interface IDiscountsService
     {
         bool UseDiscount(string code);
-        Discounts GetDiscountByCode(string code);
+        Discount GetDiscountByCode(string code);
     }
 }

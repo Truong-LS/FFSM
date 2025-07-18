@@ -16,15 +16,15 @@ namespace Repositories.Repositories
         {
             _itemsDAO = new ItemsDAO();
         }
-        public List<Items> GetAllItems()
+        public List<Item> GetAllItems()
         {
             return _itemsDAO.GetAllItems();
         }
-        public List<Items> SearchItems(string keyword)
+        public List<Item> SearchItems(string keyword)
         {
             return _itemsDAO.SearchItems(keyword);
         }
-        public List<Items> GetItemsByCategory(int categoryId)
+        public List<Item> GetItemsByCategory(int categoryId)
         {
             return _itemsDAO.GetItemsByCategory(categoryId);
         }

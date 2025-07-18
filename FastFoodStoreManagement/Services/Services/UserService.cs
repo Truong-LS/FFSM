@@ -1,67 +1,60 @@
+using DocumentFormat.OpenXml.Spreadsheet;
+using Models;
+using Repositories.Interfaces;
+using Repositories.Repositories;
+using Services.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Models;
-using Repositories.Interfaces;
-using Services.Interfaces;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Services.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepos _userRepos;
+        private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepos userRepos)
+        public UserService()
         {
-            _userRepos = userRepos;
+            _userRepository = new UserRepository();
         }
 
-        public void CreateUser(Users user)
-        public async Task<List<Users>> GetAllUsers()
+        public void CreateUser(User user)
         {
-            _userRepos.Add(user);
-            return await _userRepository.GetAllUsers();
+            _userRepository.Add(user);
         }
 
         public void DeleteUser(int id)
-        public async Task<Users?> GetUserById(int id)
         {
-            _userRepos.Delete(id);
-            return await _userRepository.GetUserById(id);
+            _userRepository.Delete(id);
         }
 
-        public IEnumerable<Users> GetAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
-            return _userRepos.GetAll();
+            return _userRepository.GetAll();
         }
 
-        public Users? GetUserById(int id)
+        public User? GetUserById(int id)
         {
-            return _userRepos.GetById(id);
+            return _userRepository.GetById(id);
         }
 
-        public Users? GetUserByUsername(string username)
-        public async Task AddUser(Users user)
+        public User? GetUserByUsername(string username)
         {
-            return _userRepos.GetByUsername(username);
-            await _userRepository.AddUser(user);
+            return _userRepository.GetByUsername(username);
         }
 
-        public Users? Login(string username, string password)
-        public async Task UpdateUser(Users user)
+        public User? Login(string username, string password)
         {
-            return _userRepos.GetByUsernameAndPassword(username, password);
+            return _userRepository.GetByUsernameAndPassword(username, password);
         }
 
-        public void UpdateUser(Users user)
-        public async Task DeleteUser(int id)
+        public void UpdateUser(User user)
         {
-            _userRepos.Update(user);
-            await _userRepository.DeleteUser(id);
+            _userRepository.Update(user);
         }
     }
 }

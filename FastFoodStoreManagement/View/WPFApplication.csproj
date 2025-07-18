@@ -12,15 +12,10 @@
 		<Compile Remove="Images\**" />
 		<Compile Remove="ViewModel\**" />
 		<EmbeddedResource Remove="Images\**" />
-		<EmbeddedResource Remove="ViewModel\**" />
 		<None Remove="Images\**" />
 		<None Remove="ViewModel\**" />
 		<Page Remove="Images\**" />
-		<Page Remove="ViewModel\**" />
 	</ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
 
 	<ItemGroup>
 		<None Remove="Image\1.jpg" />
@@ -265,27 +260,11 @@
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Models\Models.csproj" />
-		<ProjectReference Include="..\Services\Services.csproj" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Update="Image\19.jpg">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-
-	<ItemGroup>
-		<Page Update="View\Login.xaml">
-			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Page>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="StaffView\" />
-	</ItemGroup>
-
-
 
 </Project>

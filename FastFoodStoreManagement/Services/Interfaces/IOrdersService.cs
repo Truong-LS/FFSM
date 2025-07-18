@@ -11,6 +11,6 @@ namespace Services.Interfaces
 {
     public interface IOrdersService
     {
-        int CreateOrder(Orders order);
+        int CreateOrder(Order order);
     }
 }

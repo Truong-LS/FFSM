@@ -17,27 +17,35 @@ namespace Services.Services
         {
             _itemsRepository = new ItemRepository();
         }
-        public List<Models.Items> GetAllItems()
+        public List<Item> GetAllItems()
         {
             var items = _itemsRepository.GetAllItems();
-            return items ?? new List<Models.Items>();
+            if(items == null)
+            {
+                return new List<Item>();
+            }
+            return items;
         }
-        public List<Items> SearchItems(string keyword)
+        public List<Item> SearchItems(string keyword)
         {
             if (string.IsNullOrWhiteSpace(keyword))
             {
-                return new List<Items>();
+                return new List<Item>();
             }
             return _itemsRepository.SearchItems(keyword);
         }
-        public List<Items> GetItemsByCategory(int categoryId)
+        public List<Item> GetItemsByCategory(int categoryId)
         {
             if (categoryId <= 0)
             {
-                return new List<Items>();
+                return new List<Item>();
             }
             var items = _itemsRepository.GetItemsByCategory(categoryId);
-            return items ?? new List<Items>();
+            if (items == null)
+            {
+                return new List<Item>();
+            }
+            return items;
         }
     }
 }

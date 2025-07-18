@@ -16,7 +16,7 @@ namespace Repositories.Repositories
         {
             _paymentsDAO = new PaymentsDAO();
         }
-        public bool CreatePayment(Payments payments)
+        public bool CreatePayment(Payment payments)
         {
             payments.PaymentId = _paymentsDAO.GetNewPaymentId();
             return _paymentsDAO.AddPayment(payments);

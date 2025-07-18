@@ -10,7 +10,7 @@ namespace Repositories.Interfaces
 {
     public interface IDiscountsRepository
     {
-        Discounts GetDiscountByCode(string code);
+        Discount GetDiscountByCode(string code);
         bool UseDiscount(string code);
     }
 }

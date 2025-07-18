@@ -1,4 +1,5 @@
-﻿using Models;
+﻿
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace DataAccessObject
 {
     public class CategoriesDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public CategoriesDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
-        public List<Categories> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
             return _fastFoodDbContext.Categories.ToList();
         }

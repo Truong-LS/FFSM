@@ -1,4 +1,5 @@
 ﻿using DataAccessObject;
+using Models;
 using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Repositories.Repositories
         {
             _ordersDAO = new OrdersDAO();
         }
-        public int CreateOrder(Models.Orders order)
+        public int CreateOrder(Order order)
         {
             order.OrderId = _ordersDAO.GetNewOrderId();
             var result = _ordersDAO.CreateOrder(order);

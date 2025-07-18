@@ -9,12 +9,12 @@ namespace DataAccessObject
 {
     public class PaymentsDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public PaymentsDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
-        public bool AddPayment(Payments payment)
+        public bool AddPayment(Payment payment)
         {
             _fastFoodDbContext.Payments.Add(payment);
             var result = _fastFoodDbContext.SaveChanges();

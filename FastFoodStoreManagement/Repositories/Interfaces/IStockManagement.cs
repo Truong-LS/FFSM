@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Interfaces
+namespace Repositories.Interfaces
 {
-    public interface IPaymentsService
+    public interface IStockManagement
     {
-        public bool CreatePayment(Payment payments);
+        List<Materials> GetAllMaterials();
     }
 }

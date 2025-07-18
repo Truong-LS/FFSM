@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace View.Controls
 {
-    public partial class AccountManagement : UserControl
+    public partial class AccountManagement : Window
     {
         public AccountManagement()
         {

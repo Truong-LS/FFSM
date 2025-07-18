@@ -9,6 +9,6 @@ namespace Repositories.Interfaces
 {
     public interface IPaymentsRepository
     {
-        public bool CreatePayment(Payments payments);
+        public bool CreatePayment(Payment payments);
     }
 }

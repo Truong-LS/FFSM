@@ -9,6 +9,6 @@ namespace Services.Interfaces
 {
     public interface IMaterialsService
     {
-        public bool UpdateMaterialsByOrderDetail(OrderDetails orderDetails);
+        public bool UpdateMaterialsByOrderDetail(OrderDetail orderDetails);
     }
 }

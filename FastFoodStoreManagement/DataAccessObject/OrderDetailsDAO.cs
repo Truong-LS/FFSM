@@ -9,12 +9,12 @@ namespace DataAccessObject
 {
     public class OrderDetailsDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public OrderDetailsDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
-        public bool CreateOrderDetail(OrderDetails orderDetail)
+        public bool CreateOrderDetail(OrderDetail orderDetail)
         {
             _fastFoodDbContext.OrderDetails.Add(orderDetail);
             var result = _fastFoodDbContext.SaveChanges();

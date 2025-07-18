@@ -19,7 +19,7 @@ namespace Services.Services
             _materialsRepository = new MaterialsRepository();
             _listItemMaterialRepository = new ListItemMaterialRepository();
         }
-        public bool UpdateMaterialsByOrderDetail(OrderDetails orderDetails)
+        public bool UpdateMaterialsByOrderDetail(OrderDetail orderDetails)
         {
             var listItemMaterial = _listItemMaterialRepository.GetListItemMaterialByItemId(orderDetails.ItemId);
             foreach (var item in listItemMaterial)

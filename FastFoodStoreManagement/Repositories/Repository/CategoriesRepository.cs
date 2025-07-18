@@ -16,7 +16,7 @@ namespace Repositories.Repositories
         {
             _categoriesDAO = new CategoriesDAO();
         }
-        public List<Categories> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
             return _categoriesDAO.GetAllCategories();
         }

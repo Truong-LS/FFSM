@@ -17,10 +17,17 @@ namespace Services.Services
         {
             _categoriesRepository = new CategoriesRepository();
         }
-        public List<Categories> GetAllCategories()
+        public List<Category> GetAllCategories()
         {
             var categories = _categoriesRepository.GetAllCategories();
-            return categories ?? new List<Categories>();
+            if (categories == null)
+            {
+                return new List<Category>();
+            }
+            else
+            {
+                return categories;
+            }
         }
     }
 }

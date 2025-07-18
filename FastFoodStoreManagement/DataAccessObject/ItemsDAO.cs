@@ -9,22 +9,22 @@ namespace DataAccessObject
 {
     public class ItemsDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public ItemsDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
-        public List<Items> GetAllItems()
+        public List<Item> GetAllItems()
         {
             return _fastFoodDbContext.Items.ToList();
         }
-        public List<Items> SearchItems(string keyword)
+        public List<Item> SearchItems(string keyword)
         {
             return _fastFoodDbContext.Items
                 .Where(item => item.Name.Contains(keyword))
                 .ToList();
         }
-        public List<Items> GetItemsByCategory(int categoryID)
+        public List<Item> GetItemsByCategory(int categoryID)
         {
             return _fastFoodDbContext.Items
                 .Where(item => item.CategoryId == categoryID)

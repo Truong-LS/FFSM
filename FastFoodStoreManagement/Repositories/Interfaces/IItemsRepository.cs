@@ -9,8 +9,8 @@ namespace Repositories.Interfaces
 {
     public interface IItemsRepository
     {
-        List<Items> GetAllItems();
-        List<Items> SearchItems(string keyword);
-        List<Items> GetItemsByCategory(int categoryId);
+        List<Item> GetAllItems();
+        List<Item> SearchItems(string keyword);
+        List<Item> GetItemsByCategory(int categoryId);
     }
 }

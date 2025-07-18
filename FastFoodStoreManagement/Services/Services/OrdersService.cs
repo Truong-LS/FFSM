@@ -17,7 +17,7 @@ namespace Services.Services
         {
             _ordersRepository = new OrdersRepository();
         }
-        public int CreateOrder(Orders order)
+        public int CreateOrder(Order order)
         {
             if (order == null)
             {

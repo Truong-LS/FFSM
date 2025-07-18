@@ -9,6 +9,6 @@ namespace Services.Interfaces
 {
     public interface ICategoriesService
     {
-        List<Categories> GetAllCategories();
+        List<Category> GetAllCategories();
     }
 }

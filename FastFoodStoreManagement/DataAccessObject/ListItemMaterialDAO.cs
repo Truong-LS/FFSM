@@ -9,14 +9,14 @@ namespace DataAccessObject
 {
     public class ListItemMaterialDAO
     {
-        private readonly FastFoodDbContext _fastFoodDbContext;
+        private readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public ListItemMaterialDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
         public List<ListItemMaterial> GetListItemMaterialByItemId(int itemId)
         {
-            return _fastFoodDbContext.ListItemMaterial.Where(x => x.ItemId == itemId).ToList();
+            return _fastFoodDbContext.ListItemMaterials.Where(x => x.ItemId == itemId).ToList();
         }
     }
 }

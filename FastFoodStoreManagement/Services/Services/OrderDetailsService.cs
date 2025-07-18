@@ -19,7 +19,7 @@ namespace Services.Services
         {
             _orderDetailsRepository = new OrderDetailsRepository();
         }
-        public int CreateOrderDetail(OrderDetails orderDetail)
+        public int CreateOrderDetail(OrderDetail orderDetail)
         {
             if (orderDetail == null)
             {

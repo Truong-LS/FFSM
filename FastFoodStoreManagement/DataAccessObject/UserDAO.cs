@@ -1,3 +1,4 @@
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using System.Collections.Generic;
@@ -7,42 +8,42 @@ namespace DataAccessObject
 {
     public class UserDAO
     {
-        private readonly FastFoodDbContext _context;
+        private readonly FastFoodManagermentSystemContext _context;
 
         public UserDAO()
         {
-            _context = new FastFoodDbContext();
+            _context = new FastFoodManagermentSystemContext();
         }
 
-        public async Task<List<Users>> GetAllUsers()
+        public List<User> GetAllUsers()
         {
-            return await _context.Users.ToListAsync();
+            return _context.Users.ToList();
         }
 
-        public async Task<Users?> GetUserById(int id)
+        public User? GetUserById(int id)
         {
-            return await _context.Users.FindAsync(id);
+            return _context.Users.Find(id);
         }
 
-        public async Task AddUser(Users user)
+        public void AddUser(User user)
         {
             _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task UpdateUser(Users user)
+        public void UpdateUser(User user)
         {
             _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public async Task DeleteUser(int id)
+        public void DeleteUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = _context.Users.Find(id);
             if (user != null)
             {
                 _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
             }
         }
     }

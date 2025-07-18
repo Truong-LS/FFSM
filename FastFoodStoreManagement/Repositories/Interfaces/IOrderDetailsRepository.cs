@@ -9,6 +9,6 @@ namespace Repositories.Interfaces
 {
     public interface IOrderDetailsRepository
     {
-        int CreateOrderDetail(OrderDetails orderDetail);
+        int CreateOrderDetail(OrderDetail orderDetail);
     }
 }

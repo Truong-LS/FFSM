@@ -10,10 +10,10 @@ namespace DataAccessObject
 {
     public class MaterialsDAO
     {
-        public readonly FastFoodDbContext _fastFoodDbContext;
+        public readonly FastFoodManagermentSystemContext _fastFoodDbContext;
         public MaterialsDAO()
         {
-            _fastFoodDbContext = new FastFoodDbContext();
+            _fastFoodDbContext = new FastFoodManagermentSystemContext();
         }
         public Materials GetMaterials(int id)
         {

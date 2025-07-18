@@ -18,7 +18,7 @@ namespace Services.Services
         {
             _discountsRepository = new DiscountsRepository();
         }
-        public Discounts GetDiscountByCode(string code)
+        public Discount GetDiscountByCode(string code)
         {
             try
             {
